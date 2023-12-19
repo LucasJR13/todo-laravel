@@ -22,7 +22,7 @@ add('writable_dirs', ['storage', 'boostrap/cache']);
 
 // Hosts
 
-host('172.16.221.121') ->user('prod-ud4-deployer')
+host('172.16.221.117') ->user('prod-ud4-deployer')
     ->identityFile('~/.ssh/id_rsa')
     ->set('deploy_path', '/var/www/prod-ud4-a4/html');
 
