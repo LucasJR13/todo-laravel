@@ -7,13 +7,13 @@
             <form action="{{ route('todo.destroy', $todo->id) }}" method="POST" class="flex ml-2">
                 @csrf
                 @method('DELETE')
-                <x-button color="red" small>bORRRAR</x-button>
+                <x-button color="red" small>borrar</x-button>
             </form>
 
             <form action="{{ route('todo.change-is-done', $todo->id) }}" method="POST" class="flex ml-2">
                 @csrf
                 <x-button :color="$todo->is_done ? 'gray' : 'blue'" small>
-                    {{ $todo->is_done ? 'Mark As Undone' : 'Mark As Done' }}
+                    {{ $todo->is_done ? 'Marcar como no hecho' : 'Marcar como hecho' }}
                 </x-button>
             </form>
         </div>
